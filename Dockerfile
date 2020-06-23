@@ -15,3 +15,4 @@ RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
     /tmp/install-tl-unx/install-tl -profile=/tmp/install-tl-unx/texlive.profile -repository http://ctan.cs.uu.nl/systems/texlive/tlnet/ && \
     rm -rf /tmp/install-tl-unx && \
     apk del .fetch-deps
+    
