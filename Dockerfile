@@ -12,7 +12,7 @@ RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
       "tlpdbopt_install_docfiles 0" \
       "tlpdbopt_install_srcfiles 0" \
       > /tmp/install-tl-unx/texlive.profile && \
-    /tmp/install-tl-unx/install-tl -profile=/tmp/install-tl-unx/texlive.profile -repository http://ctan.cs.uu.nl/systems/texlive/tlnet/ && \
+    /tmp/install-tl-unx/install-tl -profile=/tmp/install-tl-unx/texlive.profile && \
     rm -rf /tmp/install-tl-unx && \
     apk del .fetch-deps
     
