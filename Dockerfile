@@ -1,11 +1,11 @@
 FROM alpine:3.11
 WORKDIR /workdir
-ENV PATH /usr/local/texlive/2021/bin/x86_64-linuxmusl:$PATH
+ENV PATH /usr/local/texlive/2022/bin/x86_64-linuxmusl:$PATH
 RUN apk add --no-cache curl perl fontconfig-dev freetype-dev && \
     apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing pdf2svg && \
     apk add --no-cache --virtual .fetch-deps xz tar && \
     mkdir /tmp/install-tl-unx && \
-    curl -L ftp://tug.org/historic/systems/texlive/2021/install-tl-unx.tar.gz | \
+    curl -L ftp://tug.org/historic/systems/texlive/2022/install-tl-unx.tar.gz | \
     tar -xz -C /tmp/install-tl-unx --strip-components=1 && \
     printf "%s\n" \
       "selected_scheme scheme-basic" \
